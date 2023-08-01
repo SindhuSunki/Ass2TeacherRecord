@@ -21,21 +21,22 @@ namespace Ass2TeacherRecords
                 Console.WriteLine("2. Add New Teacher");
                 Console.WriteLine("3. Update Teacher Data");
                 Console.WriteLine("4. Exit");
-                Console.Write("Enter your choice: ");
-                string input = Console.ReadLine();
 
-                switch (input)
+                Console.WriteLine("Enter your Choice");
+
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
                 {
-                    case "1":
+                    case 1:
                         ViewAllTeachers(teachers);
                         break;
-                    case "2":
+                    case 2:
                         AddNewTeacher(teachers);
                         break;
-                    case "3":
+                    case 3:
                         UpdateTeacherData(teachers);
                         break;
-                    case "4":
+                    case 4:
                         TeacherDataProcessor.SaveTeacherData(teachers);
                         Environment.Exit(0);
                         break;
@@ -44,9 +45,12 @@ namespace Ass2TeacherRecords
                         break;
                 }
 
-                Console.WriteLine("\nPress any key to continue...");
-                Console.ReadKey();
-                Console.Clear();
+                Console.Write("Do you want to continue (yes/no)?:");
+                string continueChoice = Console.ReadLine();
+                if (continueChoice.ToLower() != "yes")
+                {
+                    break;
+                }
             }
         }
 

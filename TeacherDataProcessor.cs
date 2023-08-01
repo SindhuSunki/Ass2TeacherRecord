@@ -9,7 +9,7 @@ namespace Ass2TeacherRecords
 {
     internal class TeacherDataProcessor
     {
-        private const string FilePath = @"D:\Simplilearn classes\Project3\Student.txt";
+        private const string FilePath = @"D:\Simplilearn classes\Assisted Projects\Assesments\Ass2TeacherRecords\Teacher.txt";
 
         public static void SaveTeacherData(List<Teacher> teachers)
         {
